@@ -167,5 +167,28 @@ for num in range(1,101):
 print(diccionario)
 
 # 6. Escribe un programa que imprima la secuencia de Fibonacci hasta el décimo número.
- 
+
+def fibonacci_sequence(n):
+    sequence = []
+    a, b = 0, 1
+    for _ in range(n):
+        sequence.append(a)
+        a, b = b, a + b
+    return sequence
+n = 10
+fibonacci = fibonacci_sequence(n)
+print("Secuencia de Fibonacci hasta el décimo número:")
+print(fibonacci)
+
 # 7. Escribe un programa que encuentre e imprima los números primos menores de 100.
+
+print("Números primos menores de 100:")
+for num in range(2, 100):
+    primo = True
+    for i in range(2, num):
+        if num % i == 0:
+            primo = False
+            break
+    if primo:
+        print(num)
+        
